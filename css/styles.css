@@ -176,3 +176,11 @@ img {
   top: 0;
   z-index: 5;
 }
+
+.mnnma-link {
+  color: #837D88;
+}
+
+.mnnma-link:hover {
+  color: red;
+}
