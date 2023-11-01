@@ -21,6 +21,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: #222;
   overflow-x: hidden;
   font-family: "Arial", sans-serif;
   background-color: #fff;
@@ -39,6 +40,8 @@ img {
 
 /* Header */
 .site-header {
+  position: relative;
+  z-index: 20;
   padding-top: 21px;
   padding-bottom: 19px;
   background-color: #fff;
@@ -82,7 +85,8 @@ img {
   text-decoration: none;
 }
 
-.site-nav__link {
+.site-link {
+  display: inline-block;
   padding: 12px 29px;
   color: #2C2830;
   text-align: center;
@@ -93,4 +97,82 @@ img {
   border: 1.5px solid #2C2830;
   background-color: #fff;
   text-decoration: none;
+}
+
+.site-link--light {
+  color: #fff;
+  border: 1.5px solid #fff;
+  background-color: transparent;
+}
+
+/* Site hero */
+.site-hero {
+  position: relative;
+  z-index: 10;
+  padding-top: 105px;
+  padding-bottom: 127px;
+  background-color: #2D2641;
+  color: #fff;
+}
+
+.site-hero::before {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 270px);
+  top: -137px;
+  z-index: 10;
+  display: inline-block;
+  width: 697px;
+  height: 649px;
+  background-image: url(../img/hero-top-line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.site-hero__container {
+  position: relative;
+}
+
+.site-hero__content {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  max-width: 540px;
+}
+
+.site-hero__content::before {
+  width: 150px;
+  height: 1px;
+  margin-bottom: 63px;
+  background-color: #fff;
+  content: "";
+}
+
+.site-hero__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #FFF;
+  font-family: DM Serif Display;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 64px; /* 88.889% */
+  letter-spacing: -1px;
+}
+
+.site-hero__desc {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #FFF;
+  font-family: Karla;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.site-hero__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
 }
